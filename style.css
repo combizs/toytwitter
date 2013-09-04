@@ -1,0 +1,36 @@
+#feed ul {
+  width: 520px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#feed ul li {
+  background: white;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 5px;
+  width: 100%;
+}
+
+#feed ul li:hover {
+  background: #f3f3f3;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.feedImg {
+  width: 52px;
+  display: inline-block;
+}
+
+.content {
+  width: 468px;
+  display: inline-block;
+}

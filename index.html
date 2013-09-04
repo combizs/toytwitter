@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>Toy Twitter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
   <script>
   $(document).ready(function(){
@@ -10,8 +11,14 @@
 
     // make function to append data to <ul>
     var $feed = $('#feed').find('ul');
-    for (var i = 0, l = data.length; i < l; i++) {
-      $feed.append('<li>' + data[i].ScreenName + '</li>');
+    for (var i = 0, l = data.length, imageUrl, mediaUrl, tweet, screenName; i < l; i++) {
+      image = '<div class=feedImg><img src=' + data[i].ImageUrl + '></div>';
+      name = '<span class=name>' + data[i].ScreenName + '</span>';
+      media = data[i].mediaUrl;
+      tweet = '<span class=tweet>' + data[i].Tweet + '</span>';
+
+      content = '<div class=content>' + name + tweet + '</div>';
+      $feed.append('<li>' + image + content + '</li>');
     }
   });
   </script>
